@@ -47,6 +47,7 @@
                     <small class="text-danger">{{$message}}</small>
                 @enderror
             </div>
+            <input type="hidden" name="status" value="1">
 
             <button type="submit" class="btn btn-primary">Add Book</button>
         </form>

@@ -18,6 +18,15 @@ Route::get('/', function () {
 Route::get('/rents','RentController@index');
 Route::get('/create','RentController@create')->name('create');
 Route::post('/rent','RentController@store');
+Route::get('/rent/{rent}',"RentController@show");
+
+Route::get('/cart','RentController@cart_show');
+
+Route::get('/rent/confirm/{rent}','RentController@rent_confirm');
+Route::patch('/rent/user/{rent}','RentController@rent_user');
+
+
+
 
 Auth::routes();
 

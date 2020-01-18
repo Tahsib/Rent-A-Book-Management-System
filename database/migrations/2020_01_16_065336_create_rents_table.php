@@ -21,7 +21,9 @@ class CreateRentsTable extends Migration
             $table->string("contact");
             $table->integer('rent');
             $table->integer('time');
+            $table->boolean('status');
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('rent_id')->nullable();
             $table->timestamps();
         });
     }

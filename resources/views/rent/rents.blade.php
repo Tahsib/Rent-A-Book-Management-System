@@ -15,15 +15,17 @@
     </div>
     <div class="row">
         @foreach($rents as $rent)
-        <div class="col-lg-4">
-            <p>{{$rent->book_name}}</p>
-        </div>
-        <div class="col-lg-4">
-            <p>{{$rent->writer}}</p>
-        </div>
-        <div class="col-lg-4">
-            <p>{{$rent->rent}}</p>
-        </div>
+            @if($rent->status == 1)
+                <div class="col-lg-4">
+                    <a href="/rent/{{$rent->id}}">{{$rent->book_name}}</a>
+                </div>
+                <div class="col-lg-4">
+                    <p>{{$rent->writer}}</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>{{$rent->rent}}</p>
+                </div>
+            @endif
             @endforeach
     </div>
 

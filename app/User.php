@@ -37,8 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-   /* public function rents()
+    public function rents()
     {
         return $this->hasMany(Rent::class);
-    }*/
+    }
 }
