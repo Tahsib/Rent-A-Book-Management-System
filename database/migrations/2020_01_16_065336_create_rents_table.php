@@ -24,6 +24,7 @@ class CreateRentsTable extends Migration
             $table->boolean('status');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('rent_id')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

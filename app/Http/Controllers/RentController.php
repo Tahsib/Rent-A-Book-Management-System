@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rent;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class RentController extends Controller
 {
@@ -37,10 +38,14 @@ class RentController extends Controller
             'time'=>'required',
             'status'=>'required',
         ]);
+        if(request()->hasFile('image')){
+            $data['image'] = request()->image;
+        }
 
-       // $data['user_id'] = auth()->user()->id;
+        // $data['user_id'] = auth()->user()->id;
         //$rent = \App\Rent::create($data);
         $rent = auth()->user()->rents()->create($data);
+        $this->storeImage($rent);
 
         return redirect('/rents');
     }
@@ -48,7 +53,8 @@ class RentController extends Controller
 
     public function show(Rent $rent)
     {
-        return view('rent.show',compact('rent'));
+        $userId = auth()->user()->id;
+        return view('rent.show',compact('rent','userId'));
     }
 
     public function cart_show()
@@ -76,8 +82,13 @@ class RentController extends Controller
             'status'=>'required',
             'user_id'=>'required',
         ]);
+        if(request()->hasFile('image')){
+            $data['image'] = request()->image;
+        }
+
         $data['rent_id'] = auth()->user()->id;
         $rent->update($data);
+        $this->storeImage($rent);
         return redirect('/rents');
 
     }
@@ -97,5 +108,17 @@ class RentController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function storeImage($rent)
+    {
+        if(request()->hasFile('image')){
+            $rent->update([
+                'image'=> request()->image->store('uploads','public'),
+            ]);
+        }
+        $image = Image::make(public_path('storage/'.$rent->image))->fit(200,300);
+        $image->save();
+
     }
 }

@@ -1,29 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .image{
+            margin-left:auto;
+            margin-right:auto;
+            margin-top: 5px;
+            height:250px;
+            width:180px;
+        }
+    </style>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-4">
-            <p>Book Name</p>
-        </div>
-        <div class="col-lg-4">
-            <p>Writer</p>
-        </div>
-        <div class="col-lg-4">
-            <p>Rent</p>
-        </div>
-    </div>
     <div class="row">
         @foreach($rents as $rent)
             @if($rent->status == 1)
-                <div class="col-lg-4">
-                    <a href="/rent/{{$rent->id}}">{{$rent->book_name}}</a>
-                </div>
-                <div class="col-lg-4">
-                    <p>{{$rent->writer}}</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>{{$rent->rent}}</p>
+                <div class="col-lg-3">
+                    <div class="card text-center">
+                        <img src="{{asset('storage/'.$rent->image)}}" class="card-img-top image" alt="..."/>
+                        <div class="card-body">
+                            <p class="card-tite"><a href="/rent/{{$rent->id}}">{{$rent->book_name}}</a></p>
+                            <p class="card-text">{{$rent->writer}}</p>
+                        </div>
+                    </div>
                 </div>
             @endif
             @endforeach

@@ -50,10 +50,10 @@
                             @endif
                         @else
                             <li>
-                                <a class="nav-link" href="/rents">Available Rents</a>
+                                <a class="nav-link" href="/rents">Available Books</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="/create">Create Rent</a>
+                                <a class="nav-link" href="/create">Add books</a>
                             </li>
                             <li>
                                 <a class="nav-link" href="/cart">My Cart</a>
@@ -86,5 +86,9 @@
             @yield('content')
         </main>
     </div>
+    <script
+        src="https://code.jquery.com/jquery-3.2.0.js"
+        integrity="sha256-wPFJNIFlVY49B+CuAIrDr932XSb6Jk3J1M22M3E2ylQ="
+        crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="/rent" method="post">
+        <form action="/rent" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="book_name">Book Name</label>
@@ -46,6 +46,11 @@
                 @error('time')
                     <small class="text-danger">{{$message}}</small>
                 @enderror
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" name="image">
+                <div>{{ $errors->first('image') }}</div>
             </div>
             <input type="hidden" name="status" value="1">
 
