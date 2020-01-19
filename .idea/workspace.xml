@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b601b099-d543-4832-8e7d-e202f182ec3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rent-a-book.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rent-a-book.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_16_065336_create_rents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_16_065336_create_rents_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rent/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rent/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rent/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rent/rents.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rent/rents.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/rent/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/rent/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +165,7 @@
       <workItem from="1579153648000" duration="329000" />
       <workItem from="1579154508974" duration="8825000" />
       <workItem from="1579349751485" duration="16950000" />
-      <workItem from="1579398403861" duration="8055000" />
+      <workItem from="1579398403861" duration="12968000" />
     </task>
     <servers />
   </component>
@@ -194,5 +185,9 @@
       <screen x="0" y="28" width="1366" height="712" />
     </state>
     <state x="478" y="311" width="401" height="146" key="NewPhpFileDialog/0.28.1366.712@0.28.1366.712" timestamp="1579161366815" />
+    <state x="0" y="28" width="727" height="712" key="find.popup" timestamp="1579415644441">
+      <screen x="0" y="28" width="1366" height="712" />
+    </state>
+    <state x="0" y="28" width="727" height="712" key="find.popup/0.28.1366.712@0.28.1366.712" timestamp="1579415644441" />
   </component>
 </project>

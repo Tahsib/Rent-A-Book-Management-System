@@ -3,7 +3,7 @@
 @section('content')
     <style>
         .img{
-            height: 200px;
+            height: 150px;
             width: auto;
         }
     </style>
@@ -15,7 +15,11 @@
                         <div class="card text-center">
                             <div class="row no-gutters">
                                 <div class="col-lg-4">
+                                    @if($rent->image!=Null)
                                     <img src="{{asset('storage/'.$rent->image)}}" class="card-img img" alt="...">
+                                        @else
+                                        <img src="{{asset('images/frontend/book.png')}}" class="card-img img" alt="...">
+                                        @endif
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="card-body">

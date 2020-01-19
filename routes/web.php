@@ -25,7 +25,7 @@ Route::get('/cart','RentController@cart_show');
 Route::get('/rent/confirm/{rent}','RentController@rent_confirm');
 Route::patch('/rent/user/{rent}','RentController@rent_user');
 
-
+Route::get('/rents/user/{user}','RentController@user_rents');
 
 
 Auth::routes();

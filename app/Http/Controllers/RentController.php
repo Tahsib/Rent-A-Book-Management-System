@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Rent;
+use App\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -45,7 +46,10 @@ class RentController extends Controller
         // $data['user_id'] = auth()->user()->id;
         //$rent = \App\Rent::create($data);
         $rent = auth()->user()->rents()->create($data);
-        $this->storeImage($rent);
+        if(request()->hasFile('image')){
+            $this->storeImage($rent);
+        }
+
 
         return redirect('/rents');
     }
@@ -88,9 +92,20 @@ class RentController extends Controller
 
         $data['rent_id'] = auth()->user()->id;
         $rent->update($data);
-        $this->storeImage($rent);
+        if(request()->hasFile('image')){
+            $this->storeImage($rent);
+        }
+
         return redirect('/rents');
 
+    }
+
+    public function user_rents(User $user)
+    {
+        $rents = \App\Rent::all();
+
+
+        return view('rent.user_rents',compact('rents','user'));
     }
 
     public function edit($id)
