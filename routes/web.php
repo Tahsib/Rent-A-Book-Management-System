@@ -19,9 +19,13 @@ Route::get('/', function () {
 });
 
 Route::get('/books','BookController@index');
-Route::get('/books/create','BookController@create')->middleware('auth');
-Route::post('/books','BookController@store')->middleware('auth');
-Route::get('/home','HomeController@index')->middleware('auth');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/books/create','BookController@create');
+    Route::post('/books','BookController@store');
+    Route::get('/home','HomeController@index');
+    Route::patch('/rent/{book}','RentController@update');
+});
 
 Auth::routes();
 

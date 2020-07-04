@@ -3,27 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b601b099-d543-4832-8e7d-e202f182ec3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rent.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_16_065336_create_rents_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/frontend/book.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/frontend/de.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/frontend/lib1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/lib1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/cart.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/edit.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/rent_confirm.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/rents.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/rent/user_rents.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/books/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/books/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/books/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/books/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +194,7 @@
       <workItem from="1579398403861" duration="12968000" />
       <workItem from="1593690858083" duration="3887000" />
       <workItem from="1593779039714" duration="3101000" />
-      <workItem from="1593843570920" duration="8424000" />
+      <workItem from="1593843570920" duration="12222000" />
     </task>
     <servers />
   </component>
@@ -225,9 +210,9 @@
       <screen x="0" y="28" width="1366" height="712" />
     </state>
     <state x="466" y="143" width="426" height="482" key="FileChooserDialogImpl/0.28.1366.712@0.28.1366.712" timestamp="1593844203085" />
-    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup" timestamp="1593856396565">
+    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup" timestamp="1593861450618">
       <screen x="0" y="28" width="1366" height="712" />
     </state>
-    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup/0.28.1366.712@0.28.1366.712" timestamp="1593856396565" />
+    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup/0.28.1366.712@0.28.1366.712" timestamp="1593861450618" />
   </component>
 </project>

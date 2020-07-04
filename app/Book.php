@@ -22,4 +22,24 @@ class Book extends Model
             return asset('/images/book_default.png');
         }
     }
+
+    public function applies()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'rents',
+            'book_id',
+            'applicant_id');
+    }
+    public function apply(User $user)
+    {
+        return $this->applies()->save($user);
+    }
+
+    public function isApplied(User $user)
+    {
+        return $this->applies()
+            ->where('applicant_id',$user->id)
+            ->exists();
+    }
 }

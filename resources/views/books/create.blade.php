@@ -23,6 +23,8 @@
                     <label for="category">Category</label>
                     <input type="text" class="form-control" id="category" name="category" >
                 </div>
+
+                <input type="hidden" class="form-control" id="renter_id" name="renter_id" value=0 >
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

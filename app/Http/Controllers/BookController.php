@@ -10,7 +10,7 @@ class BookController extends Controller
 
     public function index()
     {
-        $books = Book::all();
+        $books = Book::where('renter_id',0)->get();
         return view('books.index',compact('books'));
     }
 
@@ -26,13 +26,15 @@ class BookController extends Controller
         $attributes = request()->validate([
             'book_name'=>'required|min:3|max:255',
             'writter'=>'required|min:3|max:255',
-            'category'=>'min:3|max:255'
+            'category'=>'min:3|max:255',
+            'renter_id'=>'required'
         ]);
 
         Book::create([
             'book_name'=>$attributes['book_name'],
             'writter'=>$attributes['writter'],
             'category'=>$attributes['category'],
+            'renter_id'=>$attributes['renter_id'],
             'user_id'=>auth()->id()
         ]);
 

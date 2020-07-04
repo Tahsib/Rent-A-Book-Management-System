@@ -17,14 +17,16 @@
                         <p class="card-text"><strong>Writter: </strong>{{$book->writter}}</p>
                         <p class="card-text"><strong>Added By: </strong>{{$book->user->name}}</p>
                         <p class="card-text"><small class="text-muted">Posted at: {{$book->updated_at->diffForHumans()}}</small></p>
-                        @if($book->user->id != auth()->id())
-                        <form method="POST" action="/rent">
+                        <button></button>
+                        @if($book->user->id != auth()->id() && (!$book->isApplied(auth()->user())) )
+                            <a href="{{$book->apply(auth()->user())}}">Apply</a>
+                        @endif
+                        <form method="POST" action="/rent/{{$book->id}}">
                             @csrf
                             @method('PATCH')
                             <input name="renter_id" type="hidden" value="{{auth()->id()}}">
                             <button>Rent</button>
                         </form>
-                        @endif
                     </div>
                 </div>
             </div>

@@ -51,4 +51,15 @@ class User extends Authenticatable
             return asset('images/user_default.jpg');
         }
     }
+
+    public function applies()
+    {
+        return $this->belongsToMany(
+            Book::class,
+            'rents',
+            'applicant_id',
+            'book_id');
+    }
+
+
 }
