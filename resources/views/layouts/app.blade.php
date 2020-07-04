@@ -50,39 +50,33 @@
                             @endif
                         @else
                             <li>
-                                <a class="nav-link" href="/rents">Available Books</a>
+                                <a class="nav-link" href="/home">Home</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="/create">Add books</a>
+                                <a class="nav-link" href="/books">Available Books</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="/cart">My Cart</a>
+                                <a class="nav-link" href="books/create">Add books</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
+                            <li>
+                                <a class="nav-link" href="/profile">{{auth()->user()->name}}</a>
                             </li>
+                            <li>
+                                <form method="POST" action="/logout">
+                                    @csrf
+                                    <button class="nav-link">Logout</button>
+                                </form>
+                            </li>
+
+
+
                         @endguest
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 container">
             @yield('content')
         </main>
     </div>

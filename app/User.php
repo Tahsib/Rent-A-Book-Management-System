@@ -39,6 +39,16 @@ class User extends Authenticatable
 
     public function rents()
     {
-        return $this->hasMany(Rent::class);
+        return $this->hasMany(Book::class);
+    }
+
+    public function getAvatarAttribute($value)
+    {
+        if(isset($value)){
+            return asset('storage/'.$value);
+        }
+        else{
+            return asset('images/user_default.jpg');
+        }
     }
 }

@@ -11,23 +11,18 @@
 |
 */
 
+
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/rents','RentController@index');
-Route::get('/create','RentController@create')->name('create');
-Route::post('/rent','RentController@store');
-Route::get('/rent/{rent}',"RentController@show");
-
-Route::get('/cart','RentController@cart_show');
-
-Route::get('/rent/confirm/{rent}','RentController@rent_confirm');
-Route::patch('/rent/user/{rent}','RentController@rent_user');
-
-Route::get('/rents/user/{user}','RentController@user_rents');
-
+Route::get('/books','BookController@index');
+Route::get('/books/create','BookController@create')->middleware('auth');
+Route::post('/books','BookController@store')->middleware('auth');
+Route::get('/home','HomeController@index')->middleware('auth');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
