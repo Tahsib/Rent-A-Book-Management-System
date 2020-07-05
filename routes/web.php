@@ -23,8 +23,14 @@ Route::get('/books','BookController@index');
 Route::middleware('auth')->group(function(){
     Route::get('/books/create','BookController@create');
     Route::post('/books','BookController@store');
+
     Route::get('/home','HomeController@index');
-    Route::patch('/rent/{book}','RentController@update');
+
+    Route::post('/rent/{book}/apply','RentController@store');
+
+    Route::get('profile/{user}','ProfileController@show');
+    Route::get('profile/{user}/edit','ProfileController@edit');
+    Route::patch('/profile/{user}','ProfileController@update');
 });
 
 Auth::routes();

@@ -35,11 +35,25 @@ class Book extends Model
     {
         return $this->applies()->save($user);
     }
+    public function unapply(User $user)
+    {
+        return $this->applies()->detach($user);
+    }
 
-    public function isApplied(User $user)
+    public function isAppliedBy(User $user)
     {
         return $this->applies()
             ->where('applicant_id',$user->id)
             ->exists();
+    }
+
+    public function toogleApply(User $user)
+    {
+        if($this->isAppliedBy($user)){
+            return $this->unapply($user);
+        }
+        else{
+            return $this->apply($user);
+        }
     }
 }

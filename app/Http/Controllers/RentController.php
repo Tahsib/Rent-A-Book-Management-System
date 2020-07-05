@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class RentController extends Controller
 {
+
+    public function store(Book $book)
+    {
+        $book->toogleApply(auth()->user());
+        return back();
+    }
     public function update(Book $book)
     {
         $book->renter_id = auth()->id();

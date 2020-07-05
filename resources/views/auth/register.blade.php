@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -10,6 +10,20 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
+                        <div class="form-group row">
+                            <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
+
+                            <div class="col-md-6">
+                                <input id="username" type="text" class="form-control @error('name') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+
+                                @error('username')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -59,6 +73,45 @@
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="hall" class="col-md-4 col-form-label text-md-right">Hall Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="hall" name="hall" value="{{old('hall')}}" >
+                                @error('hall')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="room_no" class="col-md-4 col-form-label text-md-right">Room No</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="room_no" name="room_no" value="{{old('room_no')}}" >
+                                @error('room_no')
+                                <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                                @enderror
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="mobile" class="col-md-4 col-form-label text-md-right">Mobile</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="mobile" name="mobile" value="{{old('mobile')}}" >
+                                @error('mobile')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
                         </div>
 
                         <div class="form-group row mb-0">

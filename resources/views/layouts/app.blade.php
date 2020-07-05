@@ -56,15 +56,15 @@
                                 <a class="nav-link" href="/books">Available Books</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="books/create">Add books</a>
+                                <a class="nav-link" href="/books/create">Rent Book</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="/profile">{{auth()->user()->name}}</a>
+                                <a class="nav-link" href="/profile/{{auth()->id()}}">{{auth()->user()->name}}</a>
                             </li>
                             <li>
                                 <form method="POST" action="/logout">
                                     @csrf
-                                    <button class="nav-link">Logout</button>
+                                    <button class="nav-link btn btn-light">Logout</button>
                                 </form>
                             </li>
 
@@ -76,9 +76,11 @@
             </div>
         </nav>
 
-        <main class="py-4 container">
+
+        <main class="py-4 container" >
             @yield('content')
         </main>
+
     </div>
     <script
         src="https://code.jquery.com/jquery-3.2.0.js"
