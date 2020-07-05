@@ -59,7 +59,7 @@
                                 <a class="nav-link" href="/books/create">Rent Book</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="/profile/{{auth()->id()}}">{{auth()->user()->name}}</a>
+                                <a class="nav-link" href="/profile/{{auth()->user()->username}}">{{auth()->user()->name}}</a>
                             </li>
                             <li>
                                 <form method="POST" action="/logout">

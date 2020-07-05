@@ -23,7 +23,7 @@
 
 
     <hr>
-    <h3>Books for rent</h3>
+    <h3>{{$user->username}}'s books for rent</h3>
     @foreach($books as $book)
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">

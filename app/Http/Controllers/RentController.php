@@ -16,7 +16,11 @@ class RentController extends Controller
     }
     public function update(Book $book)
     {
-        $book->renter_id = auth()->id();
+
+        $attribute = request()->validate([
+            'renter_id'=>'integer'
+        ]);
+        $book->renter_id = $attribute['renter_id'];
         $book->save();
         return redirect('/books');
     }

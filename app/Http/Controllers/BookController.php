@@ -10,8 +10,13 @@ class BookController extends Controller
 
     public function index()
     {
-        $books = Book::where('renter_id',0)->get();
-        return view('books.index',compact('books'));
+        $books = Book::where('renter_id',0)->where('user_id','<>',auth()->id())->get();
+        $filtered_books = $books->filter(function($book){
+            return $book->isAppliedBy(auth()->user());
+        });
+        return view('books.index',[
+            'books'=>$filtered_books
+        ]);
     }
 
 

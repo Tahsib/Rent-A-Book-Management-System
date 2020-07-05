@@ -61,5 +61,9 @@ class User extends Authenticatable
             'book_id');
     }
 
+    public function getRouteKeyName()
+    {
+        return 'username';
+    }
 
 }

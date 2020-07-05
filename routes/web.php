@@ -27,10 +27,13 @@ Route::middleware('auth')->group(function(){
     Route::get('/home','HomeController@index');
 
     Route::post('/rent/{book}/apply','RentController@store');
+    Route::patch('/rent/{book}','RentController@update');
 
     Route::get('profile/{user}','ProfileController@show');
     Route::get('profile/{user}/edit','ProfileController@edit');
     Route::patch('/profile/{user}','ProfileController@update');
+
+
 });
 
 Auth::routes();
